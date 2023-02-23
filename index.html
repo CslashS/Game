@@ -1,2 +1,66 @@
+<!DOCTYPE html>
+<style>
+h1{
+  
+  
+}
+div{
 
-<script src="index.js"/>
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+form1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  
+}
+#Button{
+
+  width:45px;
+  height:20px;
+  
+  background-color:skyblue;
+  border-radius:8px;
+  border:none;
+
+}
+
+#INPUT123{
+  width:30px;
+  height:20;
+  margin-left:50%;
+  
+}
+</style>
+<h1 id="H1INFO">Welcome to the impossible puzzle game</h1>
+<p id="PINFO">To progress, you will need to find the answer to each level by exploring the page you see right now. Hints will be given to help you find the answer to each level. Once you think you have found the answer to a level, you can input the answer into the input box you will see soon.</p>
+<div>
+<form name="form" class="form1">
+<input id="INPUT123" name="input" type="text">
+<input id="Button" type="button" onClick="Log()" value="Enter">
+<input id="QWERTYUIOP" type="button" onclick="HideInfo()" value="I understand">
+</form>
+</div>
+<script>
+var Level=1
+
+document.getElementById("INPUT123").style.visibility = "hidden";document.getElementById("Button").style.visibility = "hidden";
+
+function HideInfo(){
+	document.getElementById("QWERTYUIOP").style.visibility = "hidden";
+	document.getElementById("PINFO").innerHTML=" ";
+	document.getElementById("H1INFO").innerHTML=" ";
+		document.getElementById("INPUT123").style.visibility = "visible";
+	document.getElementById("Button").style.visibility = "visible";
+
+}
+function Log(){
+console.log(document.form.input.value)
+}
+
+
+</script>
